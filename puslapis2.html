@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Renginiai – Žaidimų Alėja</title>
+
+  <link rel="icon" type="image/png" href="nuotraukos/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+      <div class="flex-grow-1 text-center">
+      <div class="logo-wrapper">
+  <svg viewBox="0 0 500 180" class="curved-title">
+    <defs>
+      <path id="curve" d="M 100,160 A 150,150 0 0 1 400,160" />
+    </defs>
+    <text fill="#F4F4FE" font-size="30" font-weight="bold">
+      <textPath href="#curve" startOffset="50%" text-anchor="middle" letter-spacing="5">
+        ŽAIDIMŲ ALĖJA
+      </textPath>
+    </text>
+  </svg>
+</div>
+      </div>
+      <div class="text-end">
+        <a href="prisijungti.html" class="login-btn">Prisijungti</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <nav class="nav justify-content-center mt-2">
+          <a href="index.html" class="active">Pagrindinis</a>
+          <a href="renginiai.html">Renginiai</a>
+          <a href="apie.html">Apie</a>
+          <a href="įspūdžiai.html">Įspūdžiai</a>
+          <a href="kontaktai.html">Kontaktai</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TURINYS -->
+<main class="content container-fluid my-4">
+  <div class="row g-4">
+
+    <!-- FILTRŲ SKILTIS (kairė) -->
+    <aside class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 d-none d-lg-block">
+      <div class="filters">
+        <h3>Filtruoti pagal</h3>
+
+        <div class="filter-group">
+          <h4>Žanras</h4>
+          <label><input type="checkbox"> Strategija</label>
+          <label><input type="checkbox"> Kortų žaidimai</label>
+          <label><input type="checkbox"> Šeimos žaidimai</label>
+          <label><input type="checkbox"> Vakarėlių žaidimai</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Žaidėjų skaičius</h4>
+          <label><input type="checkbox"> 2 žaidėjai</label>
+          <label><input type="checkbox"> 3–4 žaidėjai</label>
+          <label><input type="checkbox"> 5 ir daugiau</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Amžius</h4>
+          <label><input type="checkbox"> Vaikams</label>
+          <label><input type="checkbox"> Paaugliams</label>
+          <label><input type="checkbox"> Suaugusiems</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Trukmė</h4>
+          <label><input type="checkbox"> Iki 15 min</label>
+          <label><input type="checkbox"> 30–60 min</label>
+          <label><input type="checkbox"> 60+ min</label>
+        </div>
+
+        <button class="filter-btn">Taikyti filtrus</button>
+      </div>
+    </aside>
+
+
+
+    <!-- PAGRINDINĖ DALIS-->
+    <section class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7">
+
+      <!-- MOBILŪS FILTRAI -->
+      <div class="d-lg-none mb-2">
+        <input type="checkbox" id="toggleFiltersMobile" class="toggle-checkbox">
+        <label for="toggleFiltersMobile" class="toggle-filters">☰ Filtrai</label>
+
+        <div class="mobile-filters">
+          <h3>Filtruoti pagal</h3>
+
+          <div class="filter-group">
+            <h4>Žanras</h4>
+            <label><input type="checkbox"> Strategija</label>
+            <label><input type="checkbox"> Kortų žaidimai</label>
+            <label><input type="checkbox"> Šeimos žaidimai</label>
+            <label><input type="checkbox"> Vakarėlių žaidimai</label>
+          </div>
+
+          <div class="filter-group">
+            <h4>Žaidėjų skaičius</h4>
+            <label><input type="checkbox"> 2 žaidėjai</label>
+            <label><input type="checkbox"> 3–4 žaidėjai</label>
+            <label><input type="checkbox"> 5 ir daugiau</label>
+          </div>
+
+          <div class="filter-group">
+            <h4>Amžius</h4>
+            <label><input type="checkbox"> Vaikams</label>
+            <label><input type="checkbox"> Paaugliams</label>
+            <label><input type="checkbox"> Suaugusiems</label>
+          </div>
+
+          <div class="filter-group">
+            <h4>Trukmė</h4>
+            <label><input type="checkbox"> Iki 15 min</label>
+            <label><input type="checkbox"> 30–60 min</label>
+            <label><input type="checkbox"> 60+ min</label>
+          </div>
+
+          <button class="filter-btn">Taikyti filtrus</button>
+        </div>
+      </div>
+
+      <!-- PAIEŠKA + RŪŠIAVIMAS -->
+<div class="search-sort-wide mb-3">
+
+    <div class="search-wrapper">
+        <div class="search-container">
+            <input type="text" placeholder="Ieškoti žaidimo..." class="search-input">
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+
+    <div class="sort-select-inline">
+        <label>Rūšiuoti pagal:</label>
+        <select>
+          <option>Pavadinimą (A–Z)</option>
+        </select>
+    </div>
+
+</div>
+
+
+      <!-- ŽAIDIMŲ KORTELĖS -->
+      <section class="main-content">
+
+<div class="game-card">
+  <img src="nuotraukos/scythe.jpg" alt="Scythe">
+  <h3>Scythe</h3>
+  <p class="price">€64.90</p>
+</div>
+
+<div class="game-card">
+  <img src="nuotraukos/cascadia.jpg" alt="Cascadia">
+  <h3>Cascadia</h3>
+  <p class="price">€29.95</p>
+</div>
+
+<div class="game-card">
+  <img src="nuotraukos/ark_nova.jpg" alt="Ark Nova">
+  <h3>Ark Nova</h3>
+  <p class="price">€52.00</p>
+</div>
+<div class="game-card">
+  <img src="nuotraukos/wingspan.jpg" alt="Wingspan">
+  <h3>Wingspan</h3>
+  <p class="price">€44.99</p>
+</div>
+
+<div class="game-card">
+  <img src="nuotraukos/root.jpg" alt="Root">
+  <h3>Root</h3>
+  <p class="price">€59.00</p>
+</div>
+
+      </section>
+
+    </section>
+
+
+    <!-- SIDEBAR (dešinė) -->
+    <aside class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+
+      <div class="sidebar">
+        <h3>Populiariausi žaidimai</h3>
+        <ul class="game-list">
+          <li>🎲 <strong>Katanas</strong><br><span>Strateginis žaidimas.</span></li>
+          <li>🧩 <strong>Dixit</strong><br><span>Istorijų žaidimas.</span></li>
+          <li>🃏 <strong>Uno</strong><br><span>Greitas kortų žaidimas.</span></li>
+          <li>♟ <strong>Šachmatai</strong><br><span>Klasikinis strateginis.</span></li>
+          <li>🏰 <strong>Carcassonne</strong><br><span>Miestų statymo žaidimas.</span></li>
+        </ul>
+
+        <h3>Artėjantys renginiai</h3>
+        <ul class="event-list">
+          <li>📅 <strong>Spalio 20</strong> – Žaidimų vakaras</li>
+          <li>🏆 <strong>Lapkričio 5</strong> – Turnyras</li>
+        </ul>
+
+        <h3>Kontaktai</h3>
+        <p>📍 Vilnius, Lietuva</p>
+        <p>📞 +370 600 00000</p>
+        <p>✉️ info@zaidimualeja.lt</p>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+
+<!-- PUSLAPIAVIMAS -->
+<div class="pagination text-center mt-4">
+  <a href="index.html">1</a>
+  <a href="puslapis2.html" class="active">2</a>
+</div>
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2025 Žaidimų Alėja. Visos teisės saugomos.</p>
+</footer>
+
+</body>
+</html>
